@@ -1,1 +1,10 @@
-exportPattern("^[[:alpha:]]+")
+useDynLib("rYahooFinance", .registration=TRUE)
+
+import("dplyr","tidyr","httr","memisc")
+importFrom("utils", "object.size", "packageVersion")
+export("yfinConnect",
+       "yfinDisconnect",
+       "yfinQuery",
+       "yfinQuote",
+       "yfinChart"
+       )
