@@ -6,9 +6,6 @@
 \usage{
 yfinTestConnection()
 }
-\arguments{
-\item{apiKey}{This is the key provided by Yahoo Finance API}
-}
 \value{
 Returns the status code of the test API call.
 }

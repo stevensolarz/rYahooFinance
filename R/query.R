@@ -4,6 +4,7 @@
 #' @param path The path of the query.
 #'
 #' @return Result of the query
+#' @export
 #'
 yfinQuery <- function(path) {
 

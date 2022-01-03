@@ -1,3 +1,14 @@
+#' Title
+#'
+#' @param security 
+#' @param region 
+#' @param start_date 
+#' @param end_date 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 yfinDividends <- function(security,
            region = "US",
            start_date = NULL,

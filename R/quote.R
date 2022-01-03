@@ -6,6 +6,7 @@
 #'
 
 #' @return Data frame of stock market quote data.
+#' @export
 #'
 yfinQuotes <- function(securities,
                       regions="US",

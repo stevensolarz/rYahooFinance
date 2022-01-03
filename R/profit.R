@@ -1,3 +1,18 @@
+#' Title
+#'
+#' @param security 
+#' @param region 
+#' @param basePrice 
+#' @param quantity 
+#' @param tradeDate 
+#' @param realtime 
+#' @param futureDate 
+#' @param summary 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 yfinProfit <- function(security,region,basePrice,quantity=1,tradeDate,realtime=FALSE,futureDate=NULL,summary=FALSE) {
   
   if(is.null(futureDate)) { futureDate = format(Sys.Date(),"%Y%m%d") }

@@ -3,11 +3,10 @@ pkg.env$yf.baseurl <- 'https://query2.finance.yahoo.com/'
 
 #' This function tests the API connection.
 #'
-#' @param apiKey This is the key provided by Yahoo Finance API
-#'
 #' @return Returns the status code of the test API call.
+#' @export
 #'
-#'
+#' @examples
 yfinTestConnection <- function() {
 
   ## This tests to see that a query works successfully.
