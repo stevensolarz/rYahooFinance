@@ -7,6 +7,6 @@ export("yfinTestConnection",
        )
 
 
-import("dplyr",
-       "tidyr",
-       "httr")
+import(dplyr,
+       tidyr,
+       httr)
