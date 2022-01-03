@@ -1,26 +1,19 @@
 pkg.env <- new.env()
-pkg.env$yf.baseurl <- 'https://yfapi.net/'
+pkg.env$yf.baseurl <- 'https://query2.finance.yahoo.com/'
 
-#' This function initializes the package with the users API key.
+#' This function tests the API connection.
 #'
 #' @param apiKey This is the key provided by Yahoo Finance API
 #'
 #' @return Returns the status code of the test API call.
 #'
 #'
-yfinConnect <- function(apiKey) {
-
-  if(is.character(apiKey)) {
-    pkg.env$yf.apiKey <- apiKey
-  } else {
-    stop("Please check the API Key provided and try again.")
-  }
+yfinTestConnection <- function() {
 
   ## This tests to see that a query works successfully.
   status <- httr::GET(url=paste0(pkg.env$yf.baseurl, 'v8/finance/spark?symbols=AAPL'),
                       httr::add_headers(
-                        c("Content-Type"="application/json"),
-                        "x-api-key"=pkg.env$yf.apiKey
+                        c("Content-Type"="application/json")
                       ),
                       query = list(parameter = list(symbols = "AAPL")),
                       encode = "json")$status
@@ -29,20 +22,11 @@ yfinConnect <- function(apiKey) {
     message("Successfully connected to Yahoo Finance API.")
     return(status)
   } else {
-    message("Failed to connect to Yahoo Finance API. Please check the API Key provided and try again.")
-    yfinDisconnect()
+    message("Failed to connect to Yahoo Finance API. Please check your connection and try again.")
     return(status)
   }
 
 }
-
-yfinDisconnect <- function() {
-  pkg.env$yf.apiKey <- NULL
-  message("Cleared Yahoo Finance API settings.")
-}
-
-
-
 
 
 

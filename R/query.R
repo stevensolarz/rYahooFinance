@@ -18,14 +18,17 @@ yfinQuery <- function(path) {
 
   data <- httr::GET(url,
                     httr::add_headers(
-                      c("Content-Type"="application/json"),
-                      "x-api-key"=pkg.env$yf.apiKey
+                      c("Content-Type"="application/json")
                     ),
                     encode = "json")
   if(data$status_code == 403) {
-    message("Access forbidden. Please try running yfinConnect or checking that your API subscription is valid.")
+    message("Access forbidden. Please check your path and try again.")
     return(NULL)
-  } else {
+    
+  } else if(data$status_code == 404) {
+    message("Query not found. Please check your path and try again.")
+    return(NULL)
+  }else {
     return(data)
   }
 

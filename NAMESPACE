@@ -1,6 +1,5 @@
-export("yfinConnect",
-       "yfinDisconnect",
+export("yfinTestConnection",
        "yfinQuery",
-       "yfinQuote",
-       "yfinChart"
+       "yfinQuotes",
+       "yfinHistory"
        )

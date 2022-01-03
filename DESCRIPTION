@@ -1,9 +1,9 @@
 Package: rYahooFinance
-Title: Connect to the Yahoo Finance API
+Title: Connect to the Yahoo Finance API.
 Version: 0.0.1
 Authors@R: 
     person("Steven", "Solarz", , "contact@stevensolarz.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: This package retrieves data from Yahoo Finance.
 License: use_mit_license()
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
