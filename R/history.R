@@ -20,13 +20,9 @@ yfinHistory <- function(security,region="US",start_date,end_date,interval="1d",h
   
   checkHistoryType(historyType)
   
-  start_date <- convertDate(as.numeric(substr(start_date,1,4)),
-                                as.numeric(substr(start_date,5,6)),
-                                as.numeric(substr(start_date,7,8)))
+  start_date <- convertDate(start_date)
   
-  end_date <- convertDate(as.numeric(substr(end_date,1,4)),
-                              as.numeric(substr(end_date,5,6)),
-                              as.numeric(substr(end_date,7,8)))
+  end_date <- convertDate(end_date)
   
   query <- paste0('v7/finance/download/',
                   security,
@@ -38,7 +34,7 @@ yfinHistory <- function(security,region="US",start_date,end_date,interval="1d",h
                   "&events=",historyType
   )
   
-  data <- httr::content(yfinQuery(query))
+  data <- httr::content(yfinQuery(query),show_col_types = FALSE)
   
   return(data)
 }

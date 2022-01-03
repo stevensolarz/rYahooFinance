@@ -7,7 +7,7 @@
 #'
 #' @return UNIX code time-stamp
 #' 
-convertDate <- function(YYYY,MM,DD,tz="America/New_York") {
+convertNumericDate <- function(YYYY,MM,DD,tz="America/New_York") {
   
   if(nchar(YYYY) != 4) {
     stop("Year must be four digits.")
@@ -22,6 +22,14 @@ convertDate <- function(YYYY,MM,DD,tz="America/New_York") {
   )
 }
 
+
+
+convertDate <- function(date) { 
+  convertNumericDate(as.numeric(substr(date,1,4)),
+              as.numeric(substr(date,5,6)),
+              as.numeric(substr(date,7,8)))
+  
+  }
 
 
 

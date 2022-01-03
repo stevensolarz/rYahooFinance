@@ -1,5 +1,7 @@
 export("yfinTestConnection",
        "yfinQuery",
        "yfinQuotes",
-       "yfinHistory"
+       "yfinHistory",
+       "yfinProfit",
+       "yfinDividends"
        )
