@@ -50,3 +50,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 This package is inspired by work already done on the Python front:
 * [YahooFinanceAPI](https://github.com/anthonymorast/YahooFinanceAPI/)
 * [yfinance](https://github.com/ranaroussi/yfinance/)
+* (https://www.yahoofinanceapi.com/)

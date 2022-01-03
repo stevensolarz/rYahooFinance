@@ -5,3 +5,8 @@ export("yfinTestConnection",
        "yfinProfit",
        "yfinDividends"
        )
+
+
+import("dplyr",
+       "tidyr",
+       "httr")
