@@ -18,7 +18,7 @@ yfinDividends <- function(security,
     
     if (!is.null(start_date)) {
       if (is.null(end_date)) {
-        format(Sys.Date(),"%Y%m%d")
+        end_date <- format(Sys.Date(),"%Y%m%d")
       }
       
       
